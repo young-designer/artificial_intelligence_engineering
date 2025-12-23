@@ -2,7 +2,7 @@
 
 Расширенная версия проекта `eda-cli` из Семинара 03.
 
-К существующему CLI-приложению для EDA добавлен **HTTP-сервис на FastAPI** с эндпоинтами `/health`, `/quality` и `/quality-from-csv`.  
+К существующему CLI-приложению для EDA добавлен **HTTP-сервис на FastAPI** с эндпоинтами `/health`, `/quality`, `/quality-from-csv` и `/quality-flags-from-csv`.  
 Используется в рамках Семинара 04 курса «Инженерия ИИ».
 
 ---
@@ -144,7 +144,8 @@ http://127.0.0.1:8000/docs
 
 - вызывать `GET /health`;
 - вызывать `POST /quality` (форма для JSON);
-- вызывать `POST /quality-from-csv` (форма для загрузки файла).
+- вызывать `POST /quality-from-csv` (форма для загрузки файла);
+- вызывать `POST /quality-flags-from-csv` (форма для загрузки файла, только флаги качества).
 
 ---
 
@@ -244,6 +245,55 @@ curl -X POST "http://127.0.0.1:8000/quality-from-csv" \
 - `flags` - булевы флаги из `compute_quality_flags`;
 - `dataset_shape` - реальные размеры датасета (`n_rows`, `n_cols`);
 - `latency_ms` - время обработки запроса.
+
+---
+
+### 5. `POST /quality-flags-from-csv` – получение флагов качества по CSV-файлу
+
+**НОВЫЙ ЭНДПОИНТ** для HW03. Принимает CSV-файл и возвращает только булевы флаги качества данных, включая новые эвристики из HW03.
+
+**Запрос:**
+
+```http
+POST /quality-flags-from-csv
+Content-Type: multipart/form-data
+file: <CSV-файл>
+```
+
+**Пример ответа `200 OK`:**
+
+```json
+{
+  "flags": {
+    "too_few_rows": false,
+    "too_many_columns": false,
+    "too_many_missing": true,
+    "has_constant_columns": false,
+    "has_suspicious_id_duplicates": true
+  }
+}
+```
+
+**Особенности:**
+
+- Использует те же функции EDA-ядра: `summarize_dataset`, `missing_table`, `compute_quality_flags`
+- Возвращает **только флаги качества** (без оценки, сообщения и времени обработки)
+- Включает новые эвристики из HW03:
+  - `has_constant_columns` - обнаружение колонок с одним уникальным значением
+  - `has_suspicious_id_duplicates` - обнаружение дубликатов в ID-колонках
+
+**Пример вызова через `curl`:**
+
+```bash
+curl -X POST "http://127.0.0.1:8000/quality-flags-from-csv" \
+  -F "file=@data/example.csv"
+```
+
+**Отличия от других эндпоинтов:**
+
+- `/quality` - принимает агрегированные признаки, возвращает полную оценку
+- `/quality-from-csv` - принимает CSV, возвращает полную оценку с сообщением и скором
+- `/quality-flags-from-csv` - принимает CSV, возвращает **только флаги качества**
 
 ---
 
