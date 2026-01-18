@@ -1,0 +1,16 @@
+{
+  "model_name": "GradientBoosting",
+  "best_params": {
+    "learning_rate": 0.2,
+    "max_depth": 7,
+    "min_samples_leaf": 10,
+    "n_estimators": 150
+  },
+  "test_metrics": {
+    "accuracy": 0.9370833333333334,
+    "f1_score": 0.900198281559815,
+    "roc_auc": 0.9717661304656949
+  },
+  "dataset": "S06-hw-dataset-01.csv",
+  "random_state": 42
+}
