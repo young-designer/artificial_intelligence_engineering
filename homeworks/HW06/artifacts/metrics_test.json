@@ -7,9 +7,9 @@
   },
   {
     "Model": "Stacking",
-    "Accuracy": 0.94,
-    "F1-score": 0.9053876478318003,
-    "ROC-AUC": 0.9705171461581433
+    "Accuracy": 0.9404166666666667,
+    "F1-score": 0.9061063690085358,
+    "ROC-AUC": 0.9705592021735819
   },
   {
     "Model": "RandomForest",
@@ -19,9 +19,9 @@
   },
   {
     "Model": "DecisionTree",
-    "Accuracy": 0.8691666666666666,
-    "F1-score": 0.7942332896461337,
-    "ROC-AUC": 0.9097569162307654
+    "Accuracy": 0.8683333333333333,
+    "F1-score": 0.7879194630872484,
+    "ROC-AUC": 0.9066951589558683
   },
   {
     "Model": "LogisticRegression",
