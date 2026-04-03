@@ -1,9 +1,19 @@
 {
     "dataset": "STL10",
-    "experiment": "C4",
-    "num_classes": 10,
+    "model": "ResNet",
+    "input_size": [
+        3,
+        96,
+        96
+    ],
     "batch_size": 64,
-    "epochs": 20,
-    "seed": 42,
-    "test_accuracy": 95.425
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "epochs": 10,
+    "seed": 666,
+    "transforms": {
+        "base": "Resize(96,96) + ToTensor",
+        "aug": "RandomCrop + Flip + ColorJitter",
+        "resnet": "ImageNet normalization"
+    }
 }
