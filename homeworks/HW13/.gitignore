@@ -1,0 +1,23 @@
+# Виртуальное окружение
+.venv/
+
+# Чекпоинты Trainer
+artifacts/tmp_trainer/
+tmp_trainer/
+
+# Материалы семинара (не часть HW)
+S13-demo-*.ipynb
+S13-homework.md
+S13-hw-report-template.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
