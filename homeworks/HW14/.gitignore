@@ -1,0 +1,21 @@
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.python-version
+
+# Jupyter runtime noise
+*.nbconvert.ipynb
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Материалы семинара (не часть HW)
+S14-hw-report-template.md
+S14-homework.md
+
+requirements.txt
