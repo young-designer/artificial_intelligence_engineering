@@ -1,0 +1,13 @@
+order_id,order_value,items_count,delivery_distance_km,promised_hours,minutes_since_order,warehouse_backlog,courier_experience_months,courier_load_today,historical_late_rate,previous_failed_deliveries,address_quality_score,route_complexity,customer_priority_score,delivery_type,region_type,payment_type,package_size,traffic_level,weather_condition,dispatch_shift,is_weekend,is_holiday,fragile_item,requires_call_before_delivery,is_late_delivery
+ORD-100000,4988.16,2,41.64,5.7,89,2,24.1,10,0.093,0,0.955,6.08,1,same_day,industrial,prepaid,large,normal,rain,evening,False,False,False,False,1
+ORD-100001,7874.07,5,7.0,45.2,892,4,18.1,9,0.086,0,0.868,5.46,3,standard,residential,card_on_delivery,small,severe,snow,evening,True,False,False,False,0
+ORD-100002,2499.32,3,31.07,10.8,197,6,20.2,8,0.357,0,0.818,4.33,1,same_day,suburb,card_on_delivery,medium,low,snow,day,True,False,True,False,0
+ORD-100003,6395.45,1,12.74,20.6,362,3,13.6,5,0.045,0,0.767,5.05,2,express,industrial,prepaid,bulky,high,rain,morning,False,False,False,False,0
+ORD-100004,1985.43,2,11.35,47.6,1488,2,44.7,9,0.18,1,0.565,3.5,1,standard,suburb,prepaid,bulky,normal,clear,day,False,False,False,False,0
+ORD-100005,2623.19,4,4.28,68.0,1414,3,26.1,4,0.275,2,0.905,3.08,1,scheduled,city_center,prepaid,medium,normal,rain,morning,False,False,False,True,0
+ORD-100006,1581.86,2,25.13,7.5,136,11,25.3,8,0.367,0,0.57,7.93,2,same_day,remote_area,card_on_delivery,medium,severe,storm,evening,True,False,False,False,1
+ORD-100007,4106.01,8,10.71,4.0,85,7,32.5,8,0.139,1,0.53,3.11,1,same_day,city_center,prepaid,medium,normal,rain,morning,False,False,False,False,1
+ORD-100008,3876.19,4,22.86,50.0,800,7,28.8,7,0.071,0,0.853,5.24,1,standard,suburb,card_on_delivery,small,normal,clear,day,True,False,False,False,0
+ORD-100009,4901.99,3,11.45,49.2,1085,6,24.6,9,0.176,1,0.48,3.81,3,standard,suburb,prepaid,medium,high,clear,day,False,False,False,True,0
+ORD-100010,4589.01,6,19.73,44.9,870,4,41.9,6,0.127,1,0.911,5.7,1,standard,industrial,prepaid,small,high,rain,day,False,False,False,False,0
+ORD-100011,6262.7,3,2.32,71.9,1242,8,2.8,4,0.454,1,0.933,4.49,2,scheduled,city_center,card_on_delivery,small,normal,storm,evening,False,False,False,False,0
